@@ -1,4 +1,7 @@
 const container = document.querySelector(".container");
+const addBookBtn = document.querySelector("#dialog");
+const dialog = document.querySelector("dialog");
+const closeBtn = document.querySelector("dialog button");
 
 const myLibrary = [
   {
@@ -31,3 +34,11 @@ function displayBooks() {
 }
 
 displayBooks();
+
+addBookBtn.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  dialog.close();
+});
