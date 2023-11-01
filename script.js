@@ -1,5 +1,9 @@
 const container = document.querySelector(".container");
-const addBookBtn = document.querySelector("#dialog");
+const showDialog = document.querySelector("#showDialog");
+const bookDialog = document.querySelector("#bookDialog");
+const outputBox = document.querySelector("output");
+const input = document.querySelector("input");
+const confirmBtn = document.querySelector("#confirmBtn");
 const dialog = document.querySelector("dialog");
 const closeBtn = document.querySelector("dialog button");
 
@@ -35,10 +39,22 @@ function displayBooks() {
 
 displayBooks();
 
-addBookBtn.addEventListener("click", () => {
+showDialog.addEventListener("click", () => {
   dialog.showModal();
 });
 
-closeBtn.addEventListener("click", () => {
-  dialog.close();
+input.addEventListener("change", (e) => {
+  confirmBtn.value = input.value;
+});
+
+bookDialog.addEventListener("close", (e) => {
+  outputBox.value =
+    bookDialog.returnValue === "default"
+      ? "No return value"
+      : `Return value ${bookDialog.returnValue}`;
+});
+
+confirmBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  bookDialog.close(input.value);
 });
