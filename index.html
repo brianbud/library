@@ -12,7 +12,7 @@
       <h1>Library</h1>
       <div class="modal">
         <dialog id="bookDialog">
-          <form>
+          <form method="dialog">
             <div>
               <label for="title"></label>
               <input
@@ -61,10 +61,17 @@
               <label for="read">Read</label>
             </div>
             <div>
-              <button id="cancelBtn" value="cancel" formmethod="dialog">
+              <button
+                type="button"
+                id="cancelBtn"
+                value="cancel"
+                formmethod="dialog"
+              >
                 Cancel
               </button>
-              <button id="confirmBtn" value="default">Confirm</button>
+              <button type="submit" id="confirmBtn" value="default">
+                Confirm
+              </button>
             </div>
           </form>
         </dialog>
