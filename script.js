@@ -5,7 +5,6 @@ const outputBox = document.querySelector("output");
 const input = document.querySelector("input");
 const confirmBtn = document.querySelector("#confirmBtn");
 const dialog = document.querySelector("dialog");
-const closeBtn = document.querySelector("dialog button");
 
 const myLibrary = [
   {
@@ -23,7 +22,6 @@ const myLibrary = [
 ];
 
 function Book(title) {
-  //the contructor
   this.title = title;
 }
 
@@ -36,8 +34,10 @@ function displayBooks() {
   container.innerHTML = "";
   for (let i = 0; i < myLibrary.length; i++) {
     let div = document.createElement("div");
-    div.innerHTML = `<p>${myLibrary[i].title}</p><p>${myLibrary[i].author}</p>`;
-    div.classList = "card";
+    div.innerHTML = `
+    <div class="card">
+      <p>${myLibrary[i].title}</p><p>${myLibrary[i].author}</p>
+    </div>`;
     container.appendChild(div);
   }
 }
@@ -50,13 +50,6 @@ showDialog.addEventListener("click", () => {
 
 input.addEventListener("change", (e) => {
   confirmBtn.value = input.value;
-});
-
-bookDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    bookDialog.returnValue === "default"
-      ? "No return value"
-      : `Return value ${bookDialog.returnValue}`;
 });
 
 confirmBtn.addEventListener("click", (e) => {
