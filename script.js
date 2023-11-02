@@ -76,6 +76,7 @@ confirmBtn.addEventListener("click", (e) => {
     displayBooks();
     bookDialog.close(input.value);
   } else {
+    confirmBtn.disabled = true;
     return;
   }
 });
