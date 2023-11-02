@@ -66,3 +66,33 @@ form button {
   cursor: pointer;
   background-color: #2fb4a4;
 }
+
+input[type="radio"] {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid #cacaca;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+}
+
+.radios {
+  display: flex;
+  align-items: center;
+}
+
+.radios label {
+  margin-right: 1rem;
+}
+
+input[type="radio"]:checked {
+  background-color: #2a9d8f;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
