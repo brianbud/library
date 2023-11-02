@@ -33,6 +33,7 @@ function addBookToLibrary(title) {
 }
 
 function displayBooks() {
+  container.innerHTML = "";
   for (let i = 0; i < myLibrary.length; i++) {
     let div = document.createElement("div");
     div.innerHTML = `<p>${myLibrary[i].title}</p><p>${myLibrary[i].author}</p>`;
