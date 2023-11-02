@@ -22,11 +22,15 @@ const myLibrary = [
   },
 ];
 
-function Book() {
+function Book(title) {
   //the contructor
+  this.title = title;
 }
 
-function addBookToLibrary() {}
+function addBookToLibrary(title) {
+  let book = new Book(title);
+  myLibrary.push(book);
+}
 
 function displayBooks() {
   for (let i = 0; i < myLibrary.length; i++) {
@@ -56,5 +60,8 @@ bookDialog.addEventListener("close", (e) => {
 
 confirmBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  let title = document.querySelector("#title").value;
+  addBookToLibrary(title);
+  displayBooks();
   bookDialog.close(input.value);
 });
