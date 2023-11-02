@@ -14,16 +14,34 @@
         <dialog id="bookDialog">
           <form>
             <div>
-              <label for="title">Title:</label>
-              <input type="text" id="title" name="title" required />
+              <label for="title"></label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                required
+                placeholder="add title"
+              />
             </div>
             <div>
-              <label for="author">Author:</label>
-              <input type="text" id="author" name="author" required />
+              <label for="author"></label>
+              <input
+                type="text"
+                id="author"
+                name="author"
+                required
+                placeholder="add author"
+              />
             </div>
             <div>
-              <label for="pages">Pages:</label>
-              <input type="number" id="pages" name="pages" required />
+              <label for="pages"></label>
+              <input
+                type="number"
+                id="pages"
+                name="pages"
+                required
+                placeholder="pages"
+              />
             </div>
             <div>
               <input
@@ -42,8 +60,12 @@
               />
               <label for="read">Read</label>
             </div>
-            <button value="cancel" formmethod="dialog">cancel</button>
-            <button id="confirmBtn" value="default">Confirm</button>
+            <div>
+              <button id="cancelBtn" value="cancel" formmethod="dialog">
+                Cancel
+              </button>
+              <button id="confirmBtn" value="default">Confirm</button>
+            </div>
           </form>
         </dialog>
       </div>
