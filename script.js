@@ -3,6 +3,7 @@ const showDialog = document.querySelector("#showDialog");
 const bookDialog = document.querySelector("#bookDialog");
 const outputBox = document.querySelector("output");
 const input = document.querySelector("input");
+const inputs = document.querySelectorAll("input");
 const confirmBtn = document.querySelector("#confirmBtn");
 const cancelBtn = document.querySelector("#cancelBtn");
 const dialog = document.querySelector("dialog");
@@ -66,19 +67,14 @@ input.addEventListener("change", (e) => {
 });
 
 confirmBtn.addEventListener("click", (e) => {
-  if (!input.checkValidity()) {
-    e.preventDefault();
-    let title = document.querySelector("#title").value;
-    let author = document.querySelector("#author").value;
-    let pages = document.querySelector("#pages").value;
-    let status = document.querySelector("input[type='radio']:checked").value;
-    addBookToLibrary(title, author, pages, status);
-    displayBooks();
-    bookDialog.close(input.value);
-  } else {
-    confirmBtn.disabled = true;
-    return;
-  }
+  e.preventDefault();
+  let title = document.querySelector("#title").value;
+  let author = document.querySelector("#author").value;
+  let pages = document.querySelector("#pages").value;
+  let status = document.querySelector("input[type='radio']:checked").value;
+  addBookToLibrary(title, author, pages, status);
+  displayBooks();
+  bookDialog.close();
 });
 
 cancelBtn.addEventListener("click", (e) => {
