@@ -4,6 +4,7 @@ const bookDialog = document.querySelector("#bookDialog");
 const outputBox = document.querySelector("output");
 const input = document.querySelector("input");
 const inputs = document.querySelectorAll("input");
+const radioChecked = document.querySelector("input[type='radio']:checked");
 const confirmBtn = document.querySelector("#confirmBtn");
 const cancelBtn = document.querySelector("#cancelBtn");
 const dialog = document.querySelector("dialog");
@@ -66,8 +67,20 @@ input.addEventListener("change", (e) => {
   confirmBtn.value = input.value;
 });
 
+function validateForm() {
+  for (let input of inputs) {
+    if (
+      !input.checkValidity() === true &&
+      !radioChecked.checkValidity() === true
+    ) {
+      return;
+    }
+  }
+}
+
 confirmBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  validateForm();
   let title = document.querySelector("#title").value;
   let author = document.querySelector("#author").value;
   let pages = document.querySelector("#pages").value;
