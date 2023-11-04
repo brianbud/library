@@ -52,6 +52,7 @@ function displayBooks() {
       <p>${myLibrary[i].author}</p>
       <p>${myLibrary[i].pages}</p>
       <p>${myLibrary[i].status}</p>
+      <button class="remove" data-remove ="${i}">Remove</button>
     </div>`;
     container.appendChild(div);
   }
@@ -92,4 +93,10 @@ confirmBtn.addEventListener("click", (e) => {
 
 cancelBtn.addEventListener("click", (e) => {
   bookDialog.close();
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.dataset.remove) {
+    console.log("you clicked the remove btn");
+  }
 });
