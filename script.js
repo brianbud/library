@@ -97,6 +97,8 @@ cancelBtn.addEventListener("click", (e) => {
 
 document.addEventListener("click", (e) => {
   if (e.target.dataset.remove) {
-    console.log("you clicked the remove btn");
+    let index = e.target.dataset.remove;
+    myLibrary.splice(index, 1);
+    displayBooks();
   }
 });
