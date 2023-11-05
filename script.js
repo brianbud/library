@@ -28,6 +28,30 @@ const myLibrary = [
     pages: 12,
     status: "not read",
   },
+  {
+    title: "title test 3",
+    author: "author 3",
+    pages: 12,
+    status: "not read",
+  },
+  {
+    title: "title test 3",
+    author: "author 3",
+    pages: 12,
+    status: "not read",
+  },
+  {
+    title: "title test 3",
+    author: "author 3",
+    pages: 12,
+    status: "not read",
+  },
+  {
+    title: "title test 3",
+    author: "author 3",
+    pages: 12,
+    status: "not read",
+  },
 ];
 
 function Book(title, author, pages, status) {
