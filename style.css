@@ -1,7 +1,28 @@
+html {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
+}
+
+.title {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.title img {
+  width: 12%;
+}
+
+h1 {
+  font-weight: 800;
+  margin-top: 1rem;
+  font-size: 2.5rem;
 }
 
 main {
@@ -15,21 +36,31 @@ main {
 .container {
   background-color: #f6e1cc;
   width: 90%;
-  height: 90%;
+  height: 80%;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
 }
 
 .card {
   padding: 2rem;
-  flex-grow: 1;
-  height: 250px;
   background-color: #63bbb1;
+  height: 250px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card button {
+  width: 80%;
+  margin-top: 1rem;
+  font-weight: 400;
 }
 
 dialog {

@@ -34,24 +34,6 @@ const myLibrary = [
     pages: 12,
     status: "not read",
   },
-  {
-    title: "title test 3",
-    author: "author 3",
-    pages: 12,
-    status: "not read",
-  },
-  {
-    title: "title test 3",
-    author: "author 3",
-    pages: 12,
-    status: "not read",
-  },
-  {
-    title: "title test 3",
-    author: "author 3",
-    pages: 12,
-    status: "not read",
-  },
 ];
 
 function Book(title, author, pages, status) {
@@ -72,14 +54,18 @@ function displayBooks() {
     let div = document.createElement("div");
     div.innerHTML = `
     <div class="card">
-      <p>${myLibrary[i].title}</p>
-      <p>${myLibrary[i].author}</p>
-      <p>${myLibrary[i].pages}</p>
-      <p>${myLibrary[i].status}</p>
-      <button class="read" data-read="${i}">Mark as ${
+      <div>
+        <p>${myLibrary[i].title}</p>
+        <p>by: ${myLibrary[i].author}</p>
+        <p>${myLibrary[i].pages} pages</p>
+        <p>status: ${myLibrary[i].status}</p>
+      </div>
+      <div>
+        <button class="read" data-read="${i}">Mark as ${
       myLibrary[i].status === "not read" ? "Read" : "Unread"
     }</button>
-      <button class="remove" data-remove ="${i}">Remove</button>
+        <button class="remove" data-remove ="${i}">Remove</button>
+      </div>
     </div>`;
     container.appendChild(div);
   }
