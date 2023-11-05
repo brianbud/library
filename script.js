@@ -76,7 +76,9 @@ function displayBooks() {
       <p>${myLibrary[i].author}</p>
       <p>${myLibrary[i].pages}</p>
       <p>${myLibrary[i].status}</p>
-      <button class="read" data-read="${i}">Mark as Read</button>
+      <button class="read" data-read="${i}">Mark as ${
+      myLibrary[i].status === "not read" ? "Read" : "Unread"
+    }</button>
       <button class="remove" data-remove ="${i}">Remove</button>
     </div>`;
     container.appendChild(div);
@@ -133,6 +135,8 @@ document.addEventListener("click", (e) => {
     let index = e.target.dataset.read;
     if (myLibrary[index].status === "not read") {
       myLibrary[index].status = "finished";
+    } else if (myLibrary[index].status === "finished") {
+      myLibrary[index].status = "not read";
     }
     displayBooks();
   }
