@@ -31,6 +31,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 }
 
 .container {
@@ -41,26 +42,27 @@ main {
   justify-content: start;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
 }
 
 .card {
   padding: 2rem;
   background-color: #63bbb1;
-  height: 250px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-size: 1rem;
   font-weight: 500;
+  width: 250px;
 }
 
 .card button {
   width: 80%;
   margin-top: 1rem;
   font-weight: 400;
+  height: 2rem;
 }
 
 dialog {

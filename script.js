@@ -29,8 +29,7 @@ const myLibrary = [
     status: "not read",
   },
   {
-    title:
-      "Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman",
+    title: "Apprenticeship Patterns",
     author: "Dave Hoover. Adewale Oshineye",
     pages: 129,
     status: "finished",
