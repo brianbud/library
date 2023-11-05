@@ -11,28 +11,29 @@ const dialog = document.querySelector("dialog");
 
 const myLibrary = [
   {
-    title: "Title Test 1",
-    author: "author 1",
-    pages: 10,
+    title: "Meditations",
+    author: "Marcus Aurelius",
+    pages: 256,
+    status: "finished",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    pages: 320,
+    status: "finished",
+  },
+  {
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    pages: 256,
     status: "not read",
   },
   {
-    title: "title test 2",
-    author: "author 2",
-    pages: 11,
-    status: "not read",
-  },
-  {
-    title: "title test 3",
-    author: "author 3",
-    pages: 12,
-    status: "not read",
-  },
-  {
-    title: "title test 3",
-    author: "author 3",
-    pages: 12,
-    status: "not read",
+    title:
+      "Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman",
+    author: "Dave Hoover. Adewale Oshineye",
+    pages: 129,
+    status: "finished",
   },
 ];
 
