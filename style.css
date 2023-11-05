@@ -1,11 +1,11 @@
 body {
   display: flex;
   justify-content: center;
+  background-color: #eaeaea;
 }
 
 main {
   height: 100vh;
-  border: 1px solid red;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -13,22 +13,27 @@ main {
 }
 
 .container {
+  background-color: #f6e1cc;
   width: 90%;
+  height: 90%;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
   gap: 2rem;
-  border: 1px solid red;
-  padding: 0.5rem;
+  padding: 2rem 1rem;
+  border-radius: 10px;
 }
 
 .card {
-  width: 25rem;
+  padding: 2rem;
+  flex-grow: 1;
   height: 250px;
-  border: 2px solid red;
+  background-color: #63bbb1;
+  border-radius: 10px;
 }
 
 dialog {
+  background-color: #f6e9d5;
   margin: auto;
   border-radius: 8px;
   border: none;
@@ -60,9 +65,12 @@ form input {
   padding: 1rem;
 }
 
-form button {
-  border: none;
+button {
   border-radius: 8px;
+  border: none;
+}
+
+form button {
   padding: 1rem 2rem;
 }
 
@@ -113,4 +121,16 @@ input[type="radio"]:checked {
 button:hover,
 input[type="radio"]:hover {
   cursor: pointer;
+}
+
+#addBookBtn {
+  background-color: #e09f55;
+  padding: 1rem 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+#addBookBtn:hover {
+  background-color: #f5a346;
 }

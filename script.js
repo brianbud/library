@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const showDialog = document.querySelector("#showDialog");
+const showDialog = document.querySelector("#addBookBtn");
 const bookDialog = document.querySelector("#bookDialog");
 const outputBox = document.querySelector("output");
 const input = document.querySelector("input");
