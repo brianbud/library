@@ -76,6 +76,7 @@ function displayBooks() {
       <p>${myLibrary[i].author}</p>
       <p>${myLibrary[i].pages}</p>
       <p>${myLibrary[i].status}</p>
+      <button class="read" data-read="${i}">Mark as Read</button>
       <button class="remove" data-remove ="${i}">Remove</button>
     </div>`;
     container.appendChild(div);
@@ -123,6 +124,16 @@ document.addEventListener("click", (e) => {
   if (e.target.dataset.remove) {
     let index = e.target.dataset.remove;
     myLibrary.splice(index, 1);
+    displayBooks();
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.dataset.read) {
+    let index = e.target.dataset.read;
+    if (myLibrary[index].status === "not read") {
+      myLibrary[index].status = "finished";
+    }
     displayBooks();
   }
 });
